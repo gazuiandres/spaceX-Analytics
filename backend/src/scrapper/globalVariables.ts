@@ -1,0 +1,1 @@
+export const LAUNCHES_URL_API: string = "https://api.spacexdata.com/v5/launches/query"

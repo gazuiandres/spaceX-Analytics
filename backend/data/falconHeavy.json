@@ -1,0 +1,10 @@
+{
+    "totalLaunches": 5,
+    "totalLaunchesByYear": {
+        "2018": 1,
+        "2019": 2,
+        "2022": 2
+    },
+    "totalFailLaunches": 0,
+    "totalSuccessLaunches": 5
+}
