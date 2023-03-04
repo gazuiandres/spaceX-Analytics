@@ -8,7 +8,6 @@ const Chart = ({ data, nameKey, totalKey }) => {
         <BarChart data={data}>
             <XAxis stroke="white" dataKey={nameKey} />
             <YAxis type="number" stroke="white" domain={[0, 'dataMax+10']} />
-            <Tooltip />
             <Bar dataKey={totalKey} fill="#DD2A2A">
                 <LabelList dataKey={totalKey} fill="white" position="top" />
             </Bar>
