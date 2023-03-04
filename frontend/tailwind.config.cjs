@@ -5,7 +5,11 @@ module.exports = {
 		fontFamily: {
 			'openSans': ['Open Sans', 'sans-serif']
 		},
-		extend: {},
+		extend: {
+			backgroundImage: {
+				mainBackground: "url('https://res.cloudinary.com/dqd4krsof/image/upload/v1677885026/spaceX-project/background_l6np4z.webp')"
+			}
+		},
 	},
 	plugins: [],
 }
