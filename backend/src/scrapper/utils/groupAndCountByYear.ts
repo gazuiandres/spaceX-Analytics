@@ -1,6 +1,6 @@
 import { Launch } from "../types";
 
-type YearCount = { [key: string]: number };
+type YearCount = Record<string, number>;
 
 export default (data: Launch[]) => {
   const orderedData: YearCount = {};
