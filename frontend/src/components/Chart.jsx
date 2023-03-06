@@ -2,7 +2,6 @@ import React from "react";
 import { BarChart, XAxis, YAxis, Bar, ResponsiveContainer, Tooltip, LabelList } from "recharts";
 
 const Chart = ({ data, nameKey, totalKey }) => {
-    console.log('chart', data)
   return (
     <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
