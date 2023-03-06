@@ -1,14 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Chart from "../components/Chart";
+import RocketAnalytics from "../features/RocketAnalytics";
 
 import getGeneralAnalytics from "../services/getGeneralAnalytics";
 import getFalcon9Analytics from "../services/getFalcon9Analytics";
+import getFalconHeavyAnalytics from "../services/getFalconHeavyAnalytics";
 
-const [generalAnalytics, falcon9Analytics] = await Promise.all([
-  getGeneralAnalytics(),
-  getFalcon9Analytics(),
-]);
+const [generalAnalytics, falcon9Analytics, falconHeavyAnalytics] =
+  await Promise.all([
+    getGeneralAnalytics(),
+    getFalcon9Analytics(),
+    getFalconHeavyAnalytics(),
+  ]);
 ---
 
 <Layout title="Space X project">
@@ -87,10 +91,21 @@ const [generalAnalytics, falcon9Analytics] = await Promise.all([
     </div>
   </section>
 
-  <section id="rocketsAnalytics" class="h-auto text-white pb-16 bg-black bg-opacity-70">
-		<h2 class="text-2xl font-bold text-center py-12 mb-4 md:text-3xl md:py-5 md:mb-20">Rockets Analytics</h2>
-
-	</section>
+  <section
+    id="rocketsAnalytics"
+    class="h-auto text-white pb-16 bg-black bg-opacity-70"
+  >
+    <h2
+      class="text-2xl font-bold text-center py-12 mb-4 md:text-3xl md:py-5 md:mb-20"
+    >
+      Rockets Analytics
+    </h2>
+    <RocketAnalytics
+      client:load
+      falcon9Data={falcon9Analytics.data}
+      falconHeavyData={falconHeavyAnalytics.data}
+    />
+  </section>
 </Layout>
 
 <style>
