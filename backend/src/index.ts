@@ -26,3 +26,5 @@ apiRoutes(app);
 app.listen(process.env.PORT || 3000, () => {
   console.log(`API WORKING ON PORT: ${process.env.PORT || 3000}`);
 });
+
+module.exports = app;
